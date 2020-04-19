@@ -11,17 +11,11 @@ class Pessoa {
   }
 }
 
-class Funcionario {
-  String primeiroNome;
-  String ultimoNome;
+class Funcionario extends Pessoa {
   double salario;
 
   //construtor
-  Funcionario(this.primeiroNome, this.ultimoNome, this.salario);
-
-  String nome() {
-    return this.primeiroNome + ' ' + this.ultimoNome;
-  }
+  Funcionario(String primeiroNome, String ultimoNome, this.salario): super(primeiroNome, ultimoNome);
 }
 
 main() {
