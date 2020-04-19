@@ -1,0 +1,7 @@
+main() {
+  //var nome; // sem informar tipagem
+  dynamic nome;
+  nome = 33;
+  nome = 'Josué';
+  print(nome);
+}
