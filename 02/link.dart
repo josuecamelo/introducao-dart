@@ -1,12 +1,18 @@
 import 'dart:html';
 
-void click(String selector) {
-  Element link = querySelector(selector);
+Element link;
 
-  link.onClick.listen(printConsole);
+void click(String selector) {
+  link = querySelector(selector);
+  var msg = messageToConsole(link.attributes['href']);
+  print(msg);
 }
 
 void printConsole(Event e) {
   e.preventDefault();
   print('clicou..');
+}
+
+String messageToConsole(String url){
+  return 'Clicou em ' + url;
 }
